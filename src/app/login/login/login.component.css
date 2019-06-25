@@ -1,0 +1,35 @@
+.login-box {
+  background: #3d3d3d;
+  margin: 120px auto;
+  width: 300px;
+}
+
+.login-text {
+  border: 2px solid #3498db;
+  border-radius: 24px;
+  box-shadow: 0px 0px 8px 0px #3498db;
+  margin: 10px auto;
+  width: 230px;
+}
+
+.login-text:focus {
+  border: 2px solid white;
+  box-shadow: 0px 0px 8px 0px white;
+}
+
+.login-btn {
+  width: 230px;
+  margin: 10px auto;
+  display: inline-block;
+  border-radius: 24px;
+  box-shadow: 0px 0px 8px 0px #2ecc71;
+}
+
+.login-btn:hover, .login-btn:focus {
+  border: 2px solid white;
+  box-shadow: 0px 0px 8px 0px white;
+}
+
+.span-forget {
+  color: #3498db;
+}

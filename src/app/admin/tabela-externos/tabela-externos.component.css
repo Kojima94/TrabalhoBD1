@@ -1,0 +1,22 @@
+table {
+  width: 100%;
+  background: #4b4b4b;
+}
+
+.table-text {
+  background: grey;
+  padding: 8px 0;
+  margin: 10px auto;
+}
+
+#adicionar {
+  border: 2px solid #2ecc71;
+  box-shadow: 0px 0px 8px 0px rgba(46,204,113,1);
+  padding: 7px 14px;
+  margin-right: auto !important;
+  margin-left: 0 !important;
+}
+
+#adicionar:hover, #adicionar:focus {
+  background: #2ecc71;
+}

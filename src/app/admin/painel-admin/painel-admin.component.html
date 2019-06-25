@@ -1,0 +1,27 @@
+<mat-toolbar class="admin-nav">
+  <button mat-icon-button style="color: white" [routerLink]="'/registro'" class="mr-2">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+  Admin -&nbsp;
+  <span *ngIf="router.url === '/admin'">Registros</span>
+  <span *ngIf="router.url === '/admin/usuarios'">Usuários</span>
+  <span *ngIf="router.url === '/admin/extras'">Extras</span>
+  <span *ngIf="router.url === '/admin/externos'">Externos</span>
+</mat-toolbar>
+<div class="col-12 p-0">
+  <router-outlet></router-outlet>
+</div>
+<div class="footer p-1">
+  <button mat-icon-button style="color: #cecece" [routerLink]="'/admin'" class="mr-4 footer-icon">
+    <mat-icon>access_time</mat-icon>
+  </button>
+  <button mat-icon-button style="color: #cecece" [routerLink]="'/admin/usuarios'" class="mr-4 footer-icon">
+    <mat-icon>supervisor_account</mat-icon>
+  </button>
+  <button mat-icon-button style="color: #cecece" [routerLink]="'/admin/extras'" class="mr-4 footer-icon">
+    <mat-icon>work</mat-icon>
+  </button>
+  <button mat-icon-button style="color: #cecece" [routerLink]="'/admin/externos'" class="mr-4 footer-icon">
+    <mat-icon>assignment_ind</mat-icon>
+  </button>
+</div>

@@ -1,0 +1,10 @@
+table {
+  width: 100%;
+  background: #4b4b4b;
+}
+
+.table-text {
+  background: grey;
+  padding: 8px 0;
+  margin: 10px auto;
+}

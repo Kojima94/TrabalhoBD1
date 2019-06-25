@@ -1,0 +1,8 @@
+<div class="col-12">
+  <div class="login-box p-2 text-center">
+    <p>Informe seu usuário e senha.</p>
+    <input autofocus class="custom-text login-text" [(ngModel)]="login" placeholder="Usuário">
+    <input type="password" autofocus class="custom-text login-text" [(ngModel)]="senha" placeholder="Senha">
+    <input type="submit" class="custom-btn login-btn mb-3" (click)="auth.efetuarLogin(login, senha);" value="Acessar">
+  </div>
+</div>

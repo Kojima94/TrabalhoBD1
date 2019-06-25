@@ -1,0 +1,10 @@
+<mat-toolbar class="user-nav">
+  <button mat-icon-button style="color: white" [routerLink]="'/registro'" class="mr-2">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+  Consultar -&nbsp;
+  <span *ngIf="router.url === '/user'">Registros</span>
+</mat-toolbar>
+<div class="col-12 p-0">
+  <router-outlet></router-outlet>
+</div>

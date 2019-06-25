@@ -1,0 +1,30 @@
+.date-text {
+  border-radius: 0px;
+  background: grey;
+  margin: 10px auto;
+  padding: 8px 0;
+  width: 230px;
+}
+
+.side-bar {
+  background: grey;
+}
+
+.date-text::placeholder {
+  color: white;
+}
+
+.admin-nav {
+  background: #3d3d3d;
+  color: white;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #3d3d3d;
+  color: white;
+  text-align: center;
+}

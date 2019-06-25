@@ -1,0 +1,54 @@
+<div>
+  <div class="col-12 form-inline" style="justify-content: flex-end;">
+    <div class="col-3 col-md-1 col-lg-1 pl-0">
+      <input autofocus class="custom-text table-text" [(ngModel)]="usuario" placeholder="Documento">
+    </div>
+    <div class="col-3 col-md-1 col-lg-1 pl-0">
+      <input class="custom-text table-text" [(ngModel)]="inicio" [dropSpecialCharacters]="false" mask="00/00/0000" placeholder="Data">
+    </div>
+    <div class="col-3 col-md-1 col-lg-1 p-0" *ngIf="periodo">
+      <input class="custom-text table-text" [(ngModel)]="fim" [dropSpecialCharacters]="false" mask="00/00/0000" placeholder="Até">
+    </div>
+    <button mat-icon-button (click)="periodo = true;" *ngIf="!periodo" style="color: #cecece;">
+      <mat-icon>add</mat-icon>
+    </button>
+    <button mat-icon-button (click)="periodo = false;" *ngIf="periodo" style="color: #cecece;">
+      <mat-icon>remove</mat-icon>
+    </button>
+    <button mat-icon-button (click)="buscarExtraParams();" style="color: #cecece;">
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
+  <table mat-table [dataSource]="dataSource" style="color: white;">
+
+    <ng-container matColumnDef="documento">
+      <th mat-header-cell *matHeaderCellDef> Documento </th>
+      <td mat-cell *matCellDef="let element"> {{element.DOCUMENTO}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="horaini">
+      <th mat-header-cell *matHeaderCellDef> Hora ini </th>
+      <td mat-cell *matCellDef="let element"> {{element.HORAINI}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="diaini">
+      <th mat-header-cell *matHeaderCellDef> Dia ini </th>
+      <td mat-cell *matCellDef="let element"> {{element.DIAINI }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="horafim">
+      <th mat-header-cell *matHeaderCellDef> Hora fim </th>
+      <td mat-cell *matCellDef="let element"> {{element.HORAFIM}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="diafim">
+      <th mat-header-cell *matHeaderCellDef> Dia fim </th>
+      <td mat-cell *matCellDef="let element"> {{element.DIAFIM }} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

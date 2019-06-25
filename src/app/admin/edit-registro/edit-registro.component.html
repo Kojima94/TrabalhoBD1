@@ -1,0 +1,21 @@
+<div class="col-12" style="padding-right: 0;">
+  <h2 mat-dialog-title style="float: left; margin-bottom: 0px;">Editar registro</h2>
+</div>
+<div mat-dialog-content class="col-12 p-0 pt-4 text-center border-top">
+  <p><strong>Mude as informações necessárias e confirme.</strong></p>
+  <div class="wrapper form-inline mb-3">
+    <div class="col-6 pl-0">
+      <input autofocus class="custom-text table-text" [(ngModel)]="data.dia" [dropSpecialCharacters]="false" mask="00/00/0000" placeholder="Data">
+    </div>
+    <div class="col-6 pl-0">
+      <input autofocus class="custom-text table-text" [dropSpecialCharacters]="false" [(ngModel)]="data.hora" mask="00:00:00" placeholder="Hora">
+    </div>
+    <div class="col-12 pl-0">
+      <input autofocus class="custom-text table-text" [(ngModel)]="data.tipo" placeholder="Tipo">
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions class="actions border-top">
+  <input type="submit" class="custom-btn mr-2" (click)="atualizarRegistro(data.ctps, data.dia, data.hora, data.tipo)" id="confirmar" value="Confirmar">
+  <input type="submit" class="custom-btn" id="cancelar" (click)="dialogRef.close();" mat-dialog-close value="Cancelar">
+</div>

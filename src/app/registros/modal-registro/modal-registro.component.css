@@ -1,0 +1,78 @@
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+/deep/ .btn-success {
+  margin-left: 5px !important;
+}
+
+/deep/ .mat-dialog-container {
+  background: #4b4b4b;
+  color: #cecece;
+  border-radius: 5px;
+}
+
+/deep/ .cdk-overlay-pane {
+  max-width: 95vw !important;
+}
+
+.mat-dialog-content {
+  margin: 0;
+  padding: 0 24px;
+  max-height: 72vh;
+  overflow: auto;
+}
+
+.actions {
+  justify-content: flex-end;
+  padding: 0 10px;
+}
+
+@media (max-width: 360px) {
+  .actions {
+    padding: 0;
+  }
+
+  .mat-dialog-content {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .custom-btn {
+    padding: 10px 20px;
+  }
+}
+
+
+#confirmar {
+  border: 2px solid #2ecc71;
+  box-shadow: 0px 0px 8px 0px rgba(46,204,113,1);
+}
+
+#confirmar:hover, #confirmar:focus {
+  background: #2ecc71;
+}
+
+#cancelar {
+  border: 2px solid #d63031;
+  box-shadow: 0px 0px 8px 0px rgba(214,48,49,1);
+}
+
+#cancelar:hover, #cancelar:focus {
+  background: #d63031;
+}
+
+
+.table-text {
+  background: grey;
+  padding: 8px 0;
+  margin: 10px auto;
+}

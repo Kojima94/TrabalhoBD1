@@ -1,0 +1,28 @@
+<div class="col-12" style="padding-right: 0;">
+  <h2 mat-dialog-title style="float: left; margin-bottom: 0px;">{{svc.tiporegistro}}</h2>
+</div>
+<div mat-dialog-content class="col-12 pt-3 p-0 text-center border-top">
+  <p *ngIf="svc.tiporegistro !== 'Extra'">Confirmar {{svc.tiporegistro}}?</p>
+  <p *ngIf="svc.tiporegistro === 'Extra'"><strong>Especifique o período de início e fim da atividade.</strong></p>
+  <div class="wrapper col-12 form-inline" *ngIf="svc.tiporegistro === 'Extra'">
+    <div class="col-12 pl-0">
+      <input rows="1" class="custom-text table-text" [(ngModel)]="documento" placeholder="Documento">
+    </div>
+    <div class="col-6 pl-0">
+      <input rows="1" class="custom-text table-text" [(ngModel)]="dataini" [dropSpecialCharacters]="false" mask="00/00/0000" placeholder="Dia ini">
+    </div>
+    <div class="col-6 pl-0">
+      <input rows="1" class="custom-text table-text" [(ngModel)]="datafim" [dropSpecialCharacters]="false" mask="00/00/0000" placeholder="Dia fim">
+    </div>
+    <div class="col-6 pl-0">
+      <input rows="1" class="custom-text table-text" [(ngModel)]="inicio" [dropSpecialCharacters]="false" mask="00:00:00" placeholder="00:00:00">
+    </div>
+    <div class="col-6 pl-0">
+      <input rows="1" class="custom-text table-text" [(ngModel)]="fim" [dropSpecialCharacters]="false" mask="00:00:00" placeholder="00:00:00">
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions class="actions border-top">
+  <input type="submit" class="custom-btn mr-2" (click)="registrar()" id="confirmar" value="Confirmar">
+  <input type="submit" class="custom-btn" id="cancelar" (click)="dialogRef.close();" value="Cancelar">
+</div>

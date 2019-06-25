@@ -1,0 +1,24 @@
+<div class="col-12" style="padding-right: 0;">
+  <h2 mat-dialog-title style="float: left; margin-bottom: 0px;">Criar externo</h2>
+</div>
+<div mat-dialog-content class="col-12 p-0 pt-4 text-center border-top">
+  <p><strong>Preencha as informações necessárias e confirme.</strong></p>
+  <form [formGroup]="externoForm">
+    <div class="wrapper form-inline mb-3">
+      <div class="col-12 pl-0">
+        <input autofocus class="custom-text table-text" formControlName="nomeInput" placeholder="Nome">
+      </div>
+      <div class="col-6 pl-0">
+        <input class="custom-text table-text" formControlName="documentoInput" placeholder="Documento">
+      </div>
+      <div class="col-6 pl-0">
+        <input class="custom-text table-text" formControlName="contatoInput" placeholder="Contato">
+      </div>
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions class="actions border-top">
+  <input type="submit" class="custom-btn mr-2" (click)="validarExterno();" id="confirmar" value="Confirmar">
+  <input type="submit" class="custom-btn" id="cancelar" (click)="dialogRef.close();" value="Cancelar">
+</div>
+

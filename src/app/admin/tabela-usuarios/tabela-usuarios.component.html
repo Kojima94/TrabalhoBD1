@@ -1,0 +1,58 @@
+<div>
+  <div class="col-12 form-inline" style="justify-content: flex-end;">
+    <input type="submit" class="custom-btn mr-2" (click)="openAdd();" id="adicionar" value="Adicionar">
+    <div class="col-4 col-md-1 col-lg-1 pl-0">
+      <input autofocus class="custom-text table-text" [(ngModel)]="ctpsUsuario" placeholder="CTPS">
+    </div>
+    <div class="col-4 col-md-1 col-lg-1 pl-0">
+      <input autofocus class="custom-text table-text" [(ngModel)]="nomeUsuario" placeholder="Nome">
+    </div>
+    <button mat-icon-button (click)="buscarUsuarioPorParam();" style="color: #cecece;">
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
+  <table mat-table [dataSource]="dataSource" style="color: white;">
+
+    <ng-container matColumnDef="ctps">
+      <th mat-header-cell *matHeaderCellDef> CTPS </th>
+      <td mat-cell *matCellDef="let element"> {{element.CTPS}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let element"> {{element.NOME}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="login">
+      <th mat-header-cell *matHeaderCellDef> Login </th>
+      <td mat-cell *matCellDef="let element"> {{element.LOGIN}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="role">
+      <th mat-header-cell *matHeaderCellDef> Role </th>
+      <td mat-cell *matCellDef="let element"> {{element.ROLE}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cargahr">
+      <th mat-header-cell *matHeaderCellDef> Carga Hr. </th>
+      <td mat-cell *matCellDef="let element"> {{element.CARGAHR}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="acoes">
+      <th mat-header-cell *matHeaderCellDef> Ações </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-icon-button style="color: #cecece;" (click)="openEdit(element.CTPS, element.NOME, element.LOGIN, element.ROLE, element.CARGAHR)" class="mr-2">
+          <mat-icon class="edit">edit</mat-icon>
+        </button>
+        <button mat-icon-button style="color: #cecece;" (click)="openDelete(element.CTPS)">
+          <mat-icon class="delete">delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[10, 20]" showFirstLastButtons></mat-paginator>
+</div>

@@ -1,0 +1,11 @@
+<mat-toolbar class="home-nav">
+  Controle de ponto
+  <button mat-icon-button color="warn" [routerLink]="'/admin'" *ngIf="checarRole()"
+    style="margin-left: auto; color: white; text-shadow: 2px 2px 15px white;">
+    <mat-icon>supervised_user_circle</mat-icon>
+  </button>
+  <button mat-icon-button color="warn" [routerLink]="'/user'" *ngIf="!checarRole()"
+    style="margin-left: auto; color: white; text-shadow: 2px 2px 15px white;">
+    <mat-icon>info</mat-icon>
+  </button>
+</mat-toolbar>

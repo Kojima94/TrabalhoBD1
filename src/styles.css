@@ -1,0 +1,116 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #4b4b4b;
+  color: #cecece;
+}
+
+.custom-btn {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+#entrada {
+  border: 2px solid #2ecc71;
+  box-shadow: 0px 0px 8px 0px rgba(46,204,113,1);
+}
+
+#entrada:hover, #entrada:focus {
+  background: #2ecc71;
+}
+
+#saida {
+  border: 2px solid #d63031;
+  box-shadow: 0px 0px 8px 0px rgba(214,48,49,1);
+}
+
+#saida:hover,  #saida:focus {
+  background: #d63031;
+}
+
+#extra {
+  border: 2px solid #3498db;
+  box-shadow: 0px 0px 8px 0px rgba(52,152,219,1);
+}
+
+#extra:hover, #extra:focus {
+  background: #3498db;
+}
+
+#evento {
+  border: 2px solid #cecece;
+  box-shadow: 0px 0px 8px 0px #cecece;
+}
+
+#evento:hover {
+  background: #cecece;
+}
+
+.custom-text {
+  border: 0;
+  background: none;
+  display: inline;
+  text-align: center;
+  width: 100%;
+  padding: 14px 0px;
+  outline: none;
+  color: white;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.custom-text::placeholder {
+  color: #cecece;
+}
+
+.mat-simple-snackbar-action {
+  color: #cecece;
+}
+
+.mat-cell, .mat-header-cell {
+  color: #cecece;
+  border-bottom-color: hsl(0, 0%, 51%) !important;
+}
+
+.mat-paginator-container {
+  background: #4b4b4b;
+  color: #cecece;
+}
+
+.mat-paginator-page-size .mat-select-trigger, .mat-select-value, .mat-select-arrow {
+  color: #cecece;
+}
+
+.mat-form-field-underline {
+  background-color: #cecece !important;
+}
+
+.edit, .delete, .footer-icon {
+  transition: 0.25;
+}
+
+.edit:hover {
+  color: #3498db;
+  text-shadow: 2px 2px 15px #3498db;
+}
+
+.delete:hover {
+  color: #d63031;
+  text-shadow: 2px 2px 15px #d63031;
+}
+
+.footer-icon:hover {
+  text-shadow: 2px 2px 15px #cecece;
+}
